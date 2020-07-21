@@ -19,14 +19,14 @@
 * [✅] Push to github
 
 
-CREATE TABLE artist (
+<!-- CREATE TABLE artist (     //Create a table
     id serial PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Genre VARCHAR(100) NOT NULL,
     Gender VARCHAR(10) NOT NULL,
     Origin VARCHAR(20) NOT NULL,
     Albums VARCHAR(255) NOT NULL
-);
+); -->
 
-INSERT INTO artist(Name, Genre, Gender, Origin, Albums)
-VALUES('Jhene Aiko', 'R&B', 'Female', 'USA', '3');
+<!-- INSERT INTO artist(Name, Genre, Gender, Origin, Albums)  //Add values to Table
+VALUES('Jhene Aiko', 'R&B', 'Female', 'USA', '3'); -->

@@ -28,7 +28,7 @@ update.addEventListener('click', updateArtist);
 del.addEventListener('click', removeLast);
 
 function addArtist() {
-    event.preventDefault();
+    // event.preventDefault();
     let person = {
         name: nameCreate.value,
         genre: genreCreate.value,
@@ -50,7 +50,7 @@ function addArtist() {
 }
 
 function updateArtist() {
-    event.preventDefault();
+    // event.preventDefault();
     let person = {
         name: nameUpdate.value,
         genre: genreUpdate.value,
@@ -115,13 +115,13 @@ function updatePage() {
             artist.innerHTML = `${element.name}`
             
          
-                container.prepend(artist);
-                artist.appendChild(image);
-                artist.appendChild(name);
-                artist.appendChild(genre);
-                artist.appendChild(gender);
-                artist.appendChild(origin);
-                artist.appendChild(albums);
+            container.prepend(artist);
+            artist.appendChild(image);
+            artist.appendChild(name);
+            artist.appendChild(genre);
+            artist.appendChild(gender);
+            artist.appendChild(origin);
+            artist.appendChild(albums);
 
             }
         })
