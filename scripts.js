@@ -93,11 +93,35 @@ function updatePage() {
             console.log(element);
             
             let artist = document.createElement('h1');
+            let image = document.createElement('img');
+            let name = document.createElement('div');
+            let genre = document.createElement('div');
+            let gender = document.createElement('div');
+            let origin = document.createElement('div');
+            let albums = document.createElement('div');
+
+            genre.textContent = res[i].genre;
+            gender.textContent = res[i].gender;
+            origin.textContent = res[i].origin;
+            albums.textContent = res[i].albums;
+
+            image.setAttribute('src', `${element.img}`);
+            image.width = 320;
+            image.height = 350;
+
+            artist.className = 'card'
+
             
-            artist.innerHTML = `${element.name} ${element.genre} ${element.gender} ${element.origin} ${element.albums}`
+            artist.innerHTML = `${element.name}`
             
          
                 container.prepend(artist);
+                artist.appendChild(image);
+                artist.appendChild(name);
+                artist.appendChild(genre);
+                artist.appendChild(gender);
+                artist.appendChild(origin);
+                artist.appendChild(albums);
 
             }
         })

@@ -1,5 +1,85 @@
 body{
-    background-color: blanchedalmond;
+    
+    background-image: url(https://i.imgur.com/xvXlc8t.png);
+    background-repeat: no-repeat;
+    background-position-x: 1200px;
+    background-size: 400px;
     color: salmon;
     font-style: italic;
+    background-color: slateblue;
+}
+.container {
+    display: flex;
+    overflow-x: scroll;
+    background: transparent;
+    
+}
+.create {
+    background-color: #0000FF;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 80px;
+    height: 30px;
+}
+.update {
+    background-color: #00FF00;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 83px;
+    height: 30px;
+
+}
+.delete {
+    background-color: #FF0000;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 81px;
+    height: 30px;
+
+}
+.card {
+    border: 1px solid #282828;
+    background: #282828;
+    font-size: xx-large;
+    margin: 3px;
+    
+    /* opacity: 90%; */
+
+}
+.card:hover {
+    box-shadow: 2px 2px 5px 5px white;
+    border: 1px solid whitesmoke;
+
+
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #282828;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #101010;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
 }
