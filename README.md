@@ -13,10 +13,10 @@
 * [✅] Run <code>npm i express pg</code>
 * [✅] Run <code>npm install --save cors</code>
 * [✅] Access DB
-* [] Change queries to match new DB structure
-* [] Manipulate information to have a good looking app
-* [] Create README.md V1
-* [] Push to github
+* [✅] Change queries to match new DB structure
+* [✅] Manipulate information to have a good looking app
+* [✅] Create README.md V1
+* [✅] Push to github
 
 
 CREATE TABLE artist (
