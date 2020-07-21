@@ -33,14 +33,15 @@ const createArtist = (request, response) => {
         genre,
         gender,
         origin,
-        albums
+        albums,
+        img
     } = request.body
 
-    pool.query('INSERT INTO artist (name, genre, gender, origin, albums) VALUES ($1, $2, $3, $4, $5)', [name, genre, gender, origin, albums], (error, results) => {
+    pool.query('INSERT INTO artist (name, genre, gender, origin, albums, img) VALUES ($1, $2, $3, $4, $5, $6)', [name, genre, gender, origin, albums, img], (error, results) => {
         if (error) {
             throw error
         }
-        response.status(201).send(`Artist added: ${name}, ${genre}, ${gender}, ${origin}, ${albums}`)
+        response.status(201).send(`Artist added: ${name}, ${genre}, ${gender}, ${origin}, ${albums} ${img}`)
     })
 }
 
@@ -51,12 +52,13 @@ const updateArtist = (request, response) => {
         genre,
         gender,
         origin,
-        albums
+        albums,
+        img
     } = request.body
 
     pool.query(
-        'UPDATE artist SET name = $1, genre = $2, gender = $3, origin = $4, albums = $5 WHERE id = $6',
-        [name, genre, gender, origin, albums, id],
+        'UPDATE artist SET name = $1, genre = $2, gender = $3, origin = $4, albums = $5, img = $6 WHERE id = $7',
+        [name, genre, gender, origin, albums, img, id],
         (error, results) => {
             if (error) {
                 throw error

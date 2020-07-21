@@ -11,12 +11,16 @@ const genreCreate = document.querySelector('.genreCreate');
 const genderCreate = document.querySelector('.genderCreate');
 const originCreate = document.querySelector('.originCreate');
 const albumsCreate = document.querySelector('.albumsCreate');
+const imgCreate = document.querySelector('.imgCreate');
+
 const nameUpdate = document.querySelector('.nameUpdate');
 const genreUpdate = document.querySelector('.genreUpdate');
 const genderUpdate = document.querySelector('.genderUpdate');
 const originUpdate = document.querySelector('.originUpdate');
 const albumsUpdate = document.querySelector('.albumsUpdate');
+const imgUpdate = document.querySelector('.imgUpdate');
 const idUpdate = document.querySelector('.idUpdate');
+
 const deleteId = document.querySelector('.deleteId')
 
 create.addEventListener('click', addArtist);
@@ -24,13 +28,14 @@ update.addEventListener('click', updateArtist);
 del.addEventListener('click', removeLast);
 
 function addArtist() {
-
+    event.preventDefault();
     let person = {
         name: nameCreate.value,
         genre: genreCreate.value,
         gender: genderCreate.value,
         origin: originCreate.value,
-        albums: albumsCreate.value
+        albums: albumsCreate.value,
+        img: imgCreate.value
     }
     fetch(url, {
             method: 'POST',
@@ -45,13 +50,14 @@ function addArtist() {
 }
 
 function updateArtist() {
-
+    event.preventDefault();
     let person = {
-        name: nameCreate.value,
-        genre: genreCreate.value,
-        gender: genderCreate.value,
-        origin: originCreate.value,
-        albums: albumsCreate.value
+        name: nameUpdate.value,
+        genre: genreUpdate.value,
+        gender: genderUpdate.value,
+        origin: originUpdate.value,
+        albums: albumsUpdate.value,
+        img: imgUpdate.value
     }
     fetch(`${url}/${idUpdate.value}`, {
             method: 'PUT',
@@ -79,18 +85,18 @@ function removeLast() {
 }
 
 function updatePage() {
-
     fetch(url)
-        .then(res => res.json())
-        .then(res => {
-            for (let i = 0; i < res.length; i++) {
-                const element = res[i];
-                console.log(element);
-
-                let artist = document.createElement('h1');
-
-                artist.innerHTML = `${element.name} ${element.genre} ${element.gender} ${element.origin} ${element.albums} ${element.id}`
-
+    .then(res => res.json())
+    .then(res => {
+        for (let i = 0; i < res.length; i++) {
+            const element = res[i];
+            console.log(element);
+            
+            let artist = document.createElement('h1');
+            
+            artist.innerHTML = `${element.name} ${element.genre} ${element.gender} ${element.origin} ${element.albums}`
+            
+         
                 container.prepend(artist);
 
             }

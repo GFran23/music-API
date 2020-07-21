@@ -3,7 +3,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('./queries');
+const db = require('../music-api/queries');
 const cors = require('cors');
 const app = express();
 const port = 3000;
@@ -21,11 +21,11 @@ app.get('/', (request, response) => {
         info: 'Node.js, Express, and Postgres API'
     })
 });
-app.get('/people', db.getPeople)
-app.get('/people/:id', db.getPeopleById)
-app.post('/people', db.createPeople)
-app.put('/people/:id', db.updatePeople)
-app.delete('/people/:id', db.deletePeople)
+app.get('/artist', db.getArtist)
+app.get('/artist/:id', db.getArtistById)
+app.post('/artist', db.createArtist)
+app.put('/artist/:id', db.updateArtist)
+app.delete('/artist/:id', db.deleteArtist)
 
 app.listen(port, () => {
     console.log(`App running on port ${port}.`)
