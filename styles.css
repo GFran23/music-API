@@ -2,7 +2,8 @@ body{
     
     background-image: url(https://i.imgur.com/xvXlc8t.png);
     background-repeat: no-repeat;
-    background-position-x: 1200px;
+    /* background-position-x: 1200px; */
+    background-position-x: right;
     background-size: 400px;
     color: salmon;
     font-style: italic;
