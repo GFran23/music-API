@@ -1,12 +1,17 @@
 # Creating Simple CRUD App
+## Description: 
+This project is my first project utilizing AWS RDS. I have hosted my data in a PostgresSQL Database on AWS.
 
-## Directions:
-
-### Install the following dependencies
+## Directions (if you intend to clone or duplicate my project):
+Initialize node/package json:
+* git clone my existing repository
+* npm init -y
+Install the following dependencies:
 * npm i express pg
 * npm install --save cors
 
 ## Checklist
+* [✅] Duplicate old folder?
 * [✅] Decide what new DB will contain
 * [✅] Create a new ?music? DB
 * [✅] Fill contents of new DB
