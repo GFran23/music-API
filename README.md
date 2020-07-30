@@ -1,6 +1,7 @@
 # Creating Simple CRUD App
 ## Description: 
 This project is my first project utilizing AWS RDS. I have hosted my data in a PostgresSQL Database on AWS.
+My Project Can Be Viewed [Here](https://gfran23.github.io/music-API/)
 
 ## Directions (if you intend to clone or duplicate my project):
 Initialize node/package json:
